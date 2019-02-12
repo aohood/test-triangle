@@ -9,52 +9,30 @@
   </head>
   <body>
     <div class="container">
-      <h1>Fill in your information to complete your order!</h1>
-      <div id="blanks">
-
-
-        <form>
-
+      <h1>Caculater</h1>
+      <br></br>
+        <form id="cal">
           <div class="form-group">
-            <label for="first-name">first name</label>
-            <input id="fname" class="form-control" type="text">
+            <label for="num1">Number1</label>
+            <input id="num1" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="num2">Number2</label>
+            <input id="num2" class="form-control" type="text">
           </div>
 
           <div class="form-group">
-            <label for="last-name">Last name</label>
-            <input id="lname" class="form-control" type="text">
+            <label>Choose an operation</label>
+            <select id="operation">
+              <option id="add" value="adding">Add</option>
+              <option id="sub" value="subtracting">Subtract</option>
+              <option id="mul" value="multiplying">Multiply</option>
+              <option id="divide"value="division">Divide</option>
+            </select>
           </div>
+          <button class="btn btn-primary" type="submit">Calculate</button>
 
-          <div class="form-group">
-            <label for="address">Address</label>
-            <input id="address" class="form-control" type="text">
-          </div>
-
-          <div class="form-group">
-            <label for="phone-number">Phone number</label>
-            <input id="number" class="form-control" type="text">
-          </div>
-
-          <label for="Menu">Menu</label>
-          <select class="form-control" id="menu">
-            <option>choose an entree</option>last
-            <option>drink</option>
-            <option>shawerma sandwish</option>
-            <option>Kabab plate</option>
-            <option>kunafah</option>
-            <option>baklavah</option>
-          </select><br><br>
-          <button type="submit" class="btn btn-primary">submit your information!</button>
         </form>
-      </div>
-
-      <div id="confirmation">
-        <h1>Your receipt</h1>
-        <p>Thank you, <span class="first-name"></span> <span class="last-name"></span>for purchasing our food.
-           You have oerdered a <span class="menu"></span>Your meal will be ready in 30 minuts. It will be shipped right away to your address <span class="address"></span>
-           Thank you for  ordering from our resturant.
-         Hope to see you again soon. </p>
-      </div>
 
 
 
