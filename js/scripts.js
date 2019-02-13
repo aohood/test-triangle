@@ -15,8 +15,8 @@ $(document).ready(function() {
     }
       else if ($("#operation").val() === "subtracting"){
         alert("The result of "+($("#sub").val())+" " +
-        ($("#num1").val()) +
-        " and "+ ($("#num2").val())+ " is "+sub(number1,number2));
+        ($("#num2").val()) +
+        " from "+($("#num1").val()) + " is "+sub(number1,number2));
       }
       else if ($("#operation").val() === "multiplying") {
         alert("The result of "+($("#mul").val())+" " +
@@ -26,7 +26,7 @@ $(document).ready(function() {
       else if (($("#operation").val() === "dividing")){
         alert("The result of "+($("#divide").val())+" " +
         ($("#num1").val()) +
-        " on "+ ($("#num2").val())+ " is "+divide(number1,number2));
+        " by "+ ($("#num2").val())+ " is "+divide(number1,number2));
 
       }
 
