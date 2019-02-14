@@ -9,22 +9,24 @@ $(document).ready(function() {
 
 
     if( $("#operation").val() === "adding"){
-      alert("The result of "+($("#add").val())+" " +
-      ($("#num1").val()) +
-      " and "+ ($("#num2").val())+ " is "+add(number1,number2));
+
+      $("#result").text("The result of "+($("#add").val())+" " +
+        ($("#num1").val()) +
+        " and "+ ($("#num2").val())+ " is "+add(number1,number2));;
+
     }
       else if ($("#operation").val() === "subtracting"){
-        alert("The result of "+($("#sub").val())+" " +
+        $("#result").text("The result of "+($("#sub").val())+" " +
         ($("#num2").val()) +
         " from "+($("#num1").val()) + " is "+sub(number1,number2));
       }
       else if ($("#operation").val() === "multiplying") {
-        alert("The result of "+($("#mul").val())+" " +
+        $("#result").text("The result of "+($("#mul").val())+" " +
         ($("#num1").val()) +
         " and "+ ($("#num2").val())+ " is "+multiply(number1,number2));
       }
       else if (($("#operation").val() === "dividing")){
-        alert("The result of "+($("#divide").val())+" " +
+        $("#result").text("The result of "+($("#divide").val())+" " +
         ($("#num1").val()) +
         " by "+ ($("#num2").val())+ " is "+divide(number1,number2));
 
