@@ -1,36 +1,60 @@
 $(document).ready(function() {
 
-  $("form#cal").submit(function(event) {
+  $("button#test").click(function() {
     event.preventDefault();
-    var number1= parseFloat($("#num1").val());
-    var number2 = parseFloat($("#num2").val());
+    var l1= parseFloat($("#l1").val());
+    var l2 = parseFloat($("#l2").val());
+    var l3= parseFloat($("#l3").val());
+
+    var max;
+    var min;
+    var mid;
+
+    if (l1>l2) {
+          mid=l1;
+          min=l2;
+       } else {
+          mid=l2;
+          min=l1;
+       }
+       if (mid>l3) {
+          max=mid;
+          if(min>l3){
+             mid=min;
+             min=l3;
+          }else {
+             mid=l3;
+          }
+       }else max=l3;
+
+
+      var ar1=[min,mid,max]
+
+
+      $("#result").text("The aranged sides of the triangle are "+ ar1);
+
+        if((min+mid) > max){
+          $("#result").append(", " + "this can be a real triangle");
+
+          if ((min === mid) & (mid === max)){
+            $("#result").append(", " + " and this is an Equilateral triangle");
+
+          }
+          else if ((min === mid) | (mid === max)){
+            $("#result").append(", " + " and this is an Isosceles triangle");
+
+          }
+          else {
+            $("#result").append(", " + " and this is a Scalene triangle");
+
+          }
 
 
 
-
-    if( $("#operation").val() === "adding"){
-
-      $("#result").text("The result of "+($("#add").val())+" " +
-        ($("#num1").val()) +
-        " and "+ ($("#num2").val())+ " is "+add(number1,number2));;
-
-    }
-      else if ($("#operation").val() === "subtracting"){
-        $("#result").text("The result of "+($("#sub").val())+" " +
-        ($("#num2").val()) +
-        " from "+($("#num1").val()) + " is "+sub(number1,number2));
+        }
+        else {
+         $("#result").append(", " + "this cant be a triangle");
       }
-      else if ($("#operation").val() === "multiplying") {
-        $("#result").text("The result of "+($("#mul").val())+" " +
-        ($("#num1").val()) +
-        " and "+ ($("#num2").val())+ " is "+multiply(number1,number2));
-      }
-      else if (($("#operation").val() === "dividing")){
-        $("#result").text("The result of "+($("#divide").val())+" " +
-        ($("#num1").val()) +
-        " by "+ ($("#num2").val())+ " is "+divide(number1,number2));
-
-      }
 
 
 
@@ -41,34 +65,9 @@ $(document).ready(function() {
 
 
 
+      $("#result").show();
 
-    // $("#sub").click(function(){
-    //   alert(sub(number1,number2));
-    // }); //for the click
-    //
-    // $("#mul").select(function(){
-    //   multiply(number1,number2);
-    // }); //for the click
-    //
-    // $("#divide").select(function(){
-    //   divide(number1,number2);
-    // }); //for the click
+
 
   }); //for the submit
 }); //for the document
-
-
-
-
-  var add = function(n,m){
-    return n+m;
-  }
-  var sub = function(n,m){
-    return n-m;
-  }
-  var multiply = function(n,m){
-    return n*m;
-  }
-  var divide = function(n,m){
-    return n/m;
-  }
